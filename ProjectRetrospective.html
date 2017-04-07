@@ -35,6 +35,75 @@
       <strong>How effectively did your team manage task distribution among team members?</strong><br>
       We managed task distribution by breaking down each stage into specific task. Everyone on the team was assigned to user stories and we ensured that the work was distributed evenly. We kept each other updated on our progress and communicated through Slack. Every week, we met once to twice to discuss our progress. At each meeting, detailed minutes were taken to ensure progress. </p>
   <h2>-MVC / Design Patterns-</h2>
+    <p><b>What is the relationship between user interfaces, application logic, and data in your project?</b><br>
+      We adhered to the MVC design pattern. Our user interfaces are written in javascript and communicate with the back end of 
+      our program by calling Grails controllers (typically with a fetch call). The grails controllers in turn call our groovy 
+      and/or java domain classes and then return the requested information to the calling javascript file typically as a json.<br>
+      Our data is stored in the back end with GORM (Grails Object Relational Mapping) and hibernate. This allows us to easily save 
+      and modify information in our database.
+     </p>
+    <p><br>
+      <strong>Did you implement your server-side program as a REST API?</strong><br>
+      Yes. The client and server in our project are independent of each other. Additionally, the client only deals with the front 
+      end and the server only deals with the back end. The client never interacts with the server through anything other than REST calls.<br>
+      If, for some reason, we were to change the front end of our program entirely, it could still communicate with the back end since they 
+      are independent. The same applies if we were to change the back end of our program.<br>
+      Some of the back end of our program queries outside databases. In these cases, our back end acts as a client to query an outside server. 
+      This allows us to access information from the internet and pass it to our users. So in this way, our server-side program is also implemented 
+      as a REST API.
+     </p>
+    <p><br>
+      <strong>Which collection of classes serve as the M, V, and C in MVC?</strong><br>
+    </p>
+      <table style="undefined;table-layout: fixed; width: 602px">
+        <colgroup>
+        <col style="width: 101px">
+        <col style="width: 501px">
+        </colgroup>
+          <tr>
+            <th>Component</th>
+            <th>Classes</th>
+          </tr>
+          <tr>
+            <td>Model</td>
+            <td>Event.groovy<br>FriendList.groovy<br>Profile.groovy<br>ProfileInfo.groovy<br>RestaurantSearch.groovy<br>TwoStepOAuth.java<br>UserAccount.groovy<br>YelpAPI.java</td>
+          </tr>
+          <tr>
+            <td>View</td>
+            <td>All of the .js files in src/main/js serve as the View in MVCA<br>partial list: index.js, menu.js, profile.js, setting.js, signin.js, africa.js, europe.js</td>
+          </tr>
+          <tr>
+            <td>Controller</td>
+            <td>CreateAccountController.groovy<br>ViewAccountController.groovy<br>CreateProfileController.groovy<br>EventController.groovy<br>ManageAccountController.groovy<br>SearchController.groovy<br>SigninController.groovy</td>
+          </tr>
+        </table>
+    <p><b>How do these classes communicate with each other? Give an example based on a user action.</b><br>
+      Consider the example of creating a user account:<br>
+      <i>createAccount.js</i> is coded as a React component. The component has initial states userName, password, confirmPassword, 
+      invalidPassword, success, email. (invalidPassword is a boolean, and the other states are strings)<br>
+      Whenever a user modifies information in a text box, the corresponding state is modified. Thus, when the user has entered all 
+      of their information, all of the states will have been updated.<br>
+      When the user clicks submit, password and confirmPassword are checked against each other to make sure they match. 
+      If they do, the component calls the CreateAccountController’s ‘create’ method via a fetch call and passes the username 
+      and password via the URL.<br>
+      The <i>CreateAccountController</i> receives the username and password passed to it through the URL. The create method 
+      queries the database to see if there is an account with that username.<br>
+      Provided the account does not already exist, the <i>create</i> method creates a new instance of a <i>UserAccount</i> object 
+      with the given userName and password parameters and saves it to the database. It then creates a new instance of a <i>Profile</i>
+      object and passes the new userAccount as the ownerAccount for the profile.<br>
+      The response status is set to 200 (okay) and control is returned to <i>createAccount.js</i>.<br>
+      <i>createAccount.js</i> checks the response status from the fetch call and updates the success state accordingly, 
+      thereby making the result visible to the user.
+     </p>
+    <p><br>
+      <strong>If you were to start the project again today, what aspects of code organization could be improved in your project?</strong><br>
+      We ended up with many files and dependencies that we didn’t end up using. We should have edited them out when we decided to 
+      go in new directions with our code.<br>
+      We accessed accounts and profile information by username, which meant that we could not easily edit usernames. It would have 
+      been better to use the id assigned to a <i>UserAccount</i> by GORM to access accounts instead.<br>
+      Our passwords were stored in plaintext and this is a major security issue that would need to be addressed.
+     </p>
+    <p><br>
   <h2>-Refactor Retrospective-</h2>
     <h2>-Project Retrospective-</h2>
     <p><b>What did your group do well?</b><br>
