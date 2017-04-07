@@ -55,28 +55,45 @@
     <p><br>
       <strong>Which collection of classes serve as the M, V, and C in MVC?</strong><br>
     </p>
-      <table style="undefined;table-layout: fixed; width: 602px">
-        <colgroup>
-        <col style="width: 101px">
-        <col style="width: 501px">
-        </colgroup>
-          <tr>
-            <th>Component</th>
-            <th>Classes</th>
-          </tr>
-          <tr>
-            <td>Model</td>
-            <td>Event.groovy<br>FriendList.groovy<br>Profile.groovy<br>ProfileInfo.groovy<br>RestaurantSearch.groovy<br>TwoStepOAuth.java<br>UserAccount.groovy<br>YelpAPI.java</td>
-          </tr>
-          <tr>
-            <td>View</td>
-            <td>All of the .js files in src/main/js serve as the View in MVCA<br>partial list: index.js, menu.js, profile.js, setting.js, signin.js, africa.js, europe.js</td>
-          </tr>
-          <tr>
-            <td>Controller</td>
-            <td>CreateAccountController.groovy<br>ViewAccountController.groovy<br>CreateProfileController.groovy<br>EventController.groovy<br>ManageAccountController.groovy<br>SearchController.groovy<br>SigninController.groovy</td>
-          </tr>
-        </table>
+      <table style="float: left; height: 280px;" border="#0000" width="605">
+        <tbody>
+        <tr>
+        <td><strong>Component</strong></td>
+        <td style="width: 500px; text-align: left; vertical-align: middle;"><strong>Classes</strong></td>
+        </tr>
+        <tr>
+        <td style="text-align: center;">Model</td>
+        <td style="width: 500px; text-align: left; vertical-align: middle;">
+        <p><em>Event.groovy</em></p>
+        <p><em>FriendList.groovy</em></p>
+        <p><em>Profile.groovy</em></p>
+        <p><em>ProfileInfo.groovy</em></p>
+        <p><em>RestaurantSearch.groovy</em></p>
+        <p><em>TwoStepOAuth.java</em></p>
+        <p><em>UserAccount.groovy</em></p>
+        <p><em>YelpAPI.java</em></p>
+        </td>
+        </tr>
+        <tr>
+        <td style="text-align: center;">View</td>
+        <td style="width: 500px; text-align: left; vertical-align: middle;">
+        <p><span style="font-weight: 400;">All of the .js files in src/main/js serve as the View in MVC</span></p>
+        <p><strong><span style="font-weight: 400;">A partial list: </span><em><span style="font-weight: 400;">index.js, menu.js, profile.js, setting.js, signin.js, africa.js, europe.js</span></em></strong></p>
+        </td>
+        </tr>
+        <tr>
+        <td style="text-align: center;">Controller</td>
+        <td style="width: 500px; text-align: left; vertical-align: middle;">
+        <p><em><span style="font-weight: 400;">CreateAccountController.groovy</span></em></p>
+        <p><em><span style="font-weight: 400;">ViewAccountController.groovy</span></em></p>
+        <p><em><span style="font-weight: 400;">CreateProfileController.groovy</span></em></p>
+        <p><em><span style="font-weight: 400;">EventController.groovy</span></em></p>
+        <p><em><span style="font-weight: 400;">ManageAccountController.groovy</span></em></p>
+        <p><em><span style="font-weight: 400;">SearchController.groovy</span></em></p>
+        <strong><em><span style="font-weight: 400;">SigninController.groovy</span></em></strong></td>
+        </tr>
+        </tbody>
+       </table>
     <p><b>How do these classes communicate with each other? Give an example based on a user action.</b><br>
       Consider the example of creating a user account:<br>
       <i>createAccount.js</i> is coded as a React component. The component has initial states userName, password, confirmPassword, 
