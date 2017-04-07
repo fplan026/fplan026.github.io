@@ -43,7 +43,7 @@
       and modify information in our database.
      </p>
     <p><br>
-      <strong>Did you implement your server-side program as a REST API?</strong><br>
+      <strong><b>Did you implement your server-side program as a REST API?</b></strong><br>
       Yes. The client and server in our project are independent of each other. Additionally, the client only deals with the front 
       end and the server only deals with the back end. The client never interacts with the server through anything other than REST calls.<br>
       If, for some reason, we were to change the front end of our program entirely, it could still communicate with the back end since they 
@@ -53,8 +53,9 @@
       as a REST API.
      </p>
     <p><br>
-      <strong>Which collection of classes serve as the M, V, and C in MVC?</strong><br>
+      <strong><b>Which collection of classes serve as the M, V, and C in MVC?</b></strong><br>
     </p>
+    <div>
       <table style="float: left; height: 280px;" border="#0000" width="605">
         <tbody>
         <tr>
@@ -94,6 +95,7 @@
         </tr>
         </tbody>
        </table>
+    </div>
     <p><b>How do these classes communicate with each other? Give an example based on a user action.</b><br>
       Consider the example of creating a user account:<br>
       <i>createAccount.js</i> is coded as a React component. The component has initial states userName, password, confirmPassword, 
@@ -113,7 +115,7 @@
       thereby making the result visible to the user.
      </p>
     <p><br>
-      <strong>If you were to start the project again today, what aspects of code organization could be improved in your project?</strong><br>
+      <strong><b>If you were to start the project again today, what aspects of code organization could be improved in your project?</b></strong><br>
       We ended up with many files and dependencies that we didn’t end up using. We should have edited them out when we decided to 
       go in new directions with our code.<br>
       We accessed accounts and profile information by username, which meant that we could not easily edit usernames. It would have 
