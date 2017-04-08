@@ -25,17 +25,17 @@
   <div id="content">
   <h1>Project Retrospective</h1>
   <h2>-Work Flow-</h2>
-    <p><b>What was the process or branching model each person used to pull, develop and push?</b><br>
+    <p><b>-What was the process or branching model each person used to pull, develop and push?</b><br>
       Each of us created our own development branch to make sure that we made changes separately. We pulled from the master branch to update our branch regularly. When we wanted to combine changes, we pushed to our branch, then merged to master 
       </p>
     <p><br>
-      <strong>What development tools/frameworks did your project use?</strong><br>
+      <strong>-What development tools/frameworks did your project use?</strong><br>
       We used Grails as the framework for the backend. This offered support and organization for the groovy and java classes. For our front end we used REACT and react-router along with Javascript, HTML and CSS.</p>
     <p><br>
-      <strong>How effectively did your team manage task distribution among team members?</strong><br>
+      <strong>-How effectively did your team manage task distribution among team members?</strong><br>
       We managed task distribution by breaking down each stage into specific task. Everyone on the team was assigned to user stories and we ensured that the work was distributed evenly. We kept each other updated on our progress and communicated through Slack. Every week, we met once to twice to discuss our progress. At each meeting, detailed minutes were taken to ensure progress. </p>
   <h2>-MVC / Design Patterns-</h2>
-    <p><b>What is the relationship between user interfaces, application logic, and data in your project?</b><br>
+    <p><b>-What is the relationship between user interfaces, application logic, and data in your project?</b><br>
       We adhered to the MVC design pattern. Our user interfaces are written in javascript and communicate with the back end of 
       our program by calling Grails controllers (typically with a fetch call). The grails controllers in turn call our groovy 
       and/or java domain classes and then return the requested information to the calling javascript file typically as a json.<br>
@@ -43,7 +43,7 @@
       and modify information in our database.
      </p>
     <p><br>
-      <b>Did you implement your server-side program as a REST API?</b><br>
+      <b>-Did you implement your server-side program as a REST API?</b><br>
       Yes. The client and server in our project are independent of each other. Additionally, the client only deals with the front 
       end and the server only deals with the back end. The client never interacts with the server through anything other than REST calls.<br>
       If, for some reason, we were to change the front end of our program entirely, it could still communicate with the back end since they 
@@ -54,7 +54,7 @@
      </p>
     <br>
     <p><br>
-      <strong><b>Which collection of classes serve as the M, V, and C in MVC?</b></strong><br>
+      <strong><b>-Which collection of classes serve as the M, V, and C in MVC?</b></strong><br>
     </p>
     <div>
       <table style="height: 280px; margin-right: 10px;" border="1" width="850">
@@ -98,7 +98,7 @@
        </table>
     </div>
     <br>
-    <p><b>How do these classes communicate with each other? Give an example based on a user action.</b><br>
+    <p><b>-How do these classes communicate with each other? Give an example based on a user action.</b><br>
       Consider the example of creating a user account:<br>
       <i>createAccount.js</i> is coded as a React component. The component has initial states userName, password, confirmPassword, 
       invalidPassword, success, email. (invalidPassword is a boolean, and the other states are strings)<br>
@@ -117,7 +117,7 @@
       thereby making the result visible to the user.
      </p>
     <p><br>
-      <strong><b>If you were to start the project again today, what aspects of code organization could be improved in your project?</b></strong><br>
+      <strong><b>-If you were to start the project again today, what aspects of code organization could be improved in your project?</b></strong><br>
       We ended up with many files and dependencies that we didn’t end up using. We should have edited them out when we decided to 
       go in new directions with our code.<br>
       We accessed accounts and profile information by username, which meant that we could not easily edit usernames. It would have 
@@ -127,24 +127,24 @@
     <br>
     <p><br>
   <h2>-Refactor Retrospective-</h2>
-    <p><b>Areas of your design that you felt were strong:</b><br>
+    <p><b>-Areas of your design that you felt were strong:</b><br>
       Some of our design that worked out well was the listing of our trending restaurants, the design was laid out as dynamically created React objects inside of a specific, created from data that we had retrieved from an API call in the backend. This allowed us to easily retrieve a dynamic amount of data and display it seamlessly. Secondly, the organization and usage of our domain and controller classes allowed the team to easily be able to store the relevant data, as well as access it on demand without having to know how the data was stored in the first place.
       </p>
-    <p><b>Areas of your design that you felt were weak:</b><br>
+    <p><b>-Areas of your design that you felt were weak:</b><br>
       Some of the greatest challenges we faced throughout the project was controlling the flow and access of our data between the various layers of our project. Sharing parameters that had been created on separate React pages with no direct path of inheritance had no clear way of being resolved to begin with, and we eventually settled on globally emitted events, which felt like really bad to have to do as it breaks the encapsulation that should have been there. The ideal solution would have been to implement a combination of EventEmitters and Redux or Flux to be able to properly control where our data is “emitted to” and when. The second challenge would have been implementing real data security practices into the website as a whole, there was no HTTPS, encryption of user data, or even security tokens for viewing different pages – it was definitely disappointing to not be able to explore that aspect of our project, as cyber security practices are more important now than ever before. The best way to have begun to implement this would have been to get familiar with the SpringSecurity Package and implement all of the various features that are available to add boilerplate level security to our project.</p>
     <br>
     <h2>-Project Retrospective-</h2>
-    <p><b>What did your group do well?</b><br>
+    <p><b>-What did your group do well?</b><br>
     The group did several things well. We had an open line of communication at all times through Slack. If someone had an idea, a concern or simply needed clarification they cold reach another member and have a response almost instantly. The group as a whole was very professional and courteous of one another. If disagreements came up they were usually met with a middle ground. Meetings were held once a week (or more if needed) with meeting minutes and topics of discussion recorded for future reference. Members worked together to overcome any confusions that came up over the use of Grails and React as these were new experiences for many in the group.</p>
     <p><br>
-      <strong>What could your group have done better?</strong><br>
+      <strong>-What could your group have done better?</strong><br>
     Time management could have been improved as some tasks were left till the day before submission, however this is understandable as many members have work in other courses as well.</p>
     <p><br>
-      <strong>What did you like about the tools and frameworks you used?</strong><br>
+      <strong>-What did you like about the tools and frameworks you used?</strong><br>
       Grails was a great framework to build our backend end from, as it supplied a database that allowed us to store user information. This in turn allowed the users credentials and preferences to be accessed at a later time even after the web application was terminated.<br>
     REACT was very helpful for the front end as it allowed us to create a single page web application. We were able to change the view based on user input as well as keep a user history, so in case the user uses the browser’s back buttons the program would not crash, but redirect them to the previous view. REACT also allowed us to integrate jvector map, which is a vector map that scales when zoomed in and out of, for the DISCOVER feature of our application.</p>
     <p><br>
-      <strong>What didn’t you like about the tools and frameworks you used?</strong><br>
+      <strong>-What didn’t you like about the tools and frameworks you used?</strong><br>
     While IntelliJ is a great IDE for editing and running our application we were initially excited because of its github integration. While we did like the ability to manually merge two separate files when conflicts existed, we did encounter several occasions where files would overwrite each other without notice. We are sure this is due to the learning curve and we think it would be a great asset once the team has sufficient experience with IntelliJ and git. </p>
   </div>
   <div id="footer">
