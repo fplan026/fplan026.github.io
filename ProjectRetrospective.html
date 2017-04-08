@@ -52,6 +52,7 @@
       This allows us to access information from the internet and pass it to our users. So in this way, our server-side program is also implemented 
       as a REST API.
      </p>
+    <br>
     <p><br>
       <strong><b>Which collection of classes serve as the M, V, and C in MVC?</b></strong><br>
     </p>
@@ -123,10 +124,15 @@
       been better to use the id assigned to a <i>UserAccount</i> by GORM to access accounts instead.<br>
       Our passwords were stored in plaintext and this is a major security issue that would need to be addressed.
      </p>
+    <br>
     <p><br>
   <h2>-Refactor Retrospective-</h2>
+    <p><b>Areas of your design that you felt were strong:</b><br>
+      Some of our design that worked out well was the listing of our trending restaurants, the design was laid out as dynamically created React objects inside of a specific, created from data that we had retrieved from an API call in the backend. This allowed us to easily retrieve a dynamic amount of data and display it seamlessly. Secondly, the organization and usage of our domain and controller classes allowed the team to easily be able to store the relevant data, as well as access it on demand without having to know how the data was stored in the first place.
+      </p>
     <p><b>Areas of your design that you felt were weak:</b><br>
       Some of the greatest challenges we faced throughout the project was controlling the flow and access of our data between the various layers of our project. Sharing parameters that had been created on separate React pages with no direct path of inheritance had no clear way of being resolved to begin with, and we eventually settled on globally emitted events, which felt like really bad to have to do as it breaks the encapsulation that should have been there. The ideal solution would have been to implement a combination of EventEmitters and Redux or Flux to be able to properly control where our data is “emitted to” and when. The second challenge would have been implementing real data security practices into the website as a whole, there was no HTTPS, encryption of user data, or even security tokens for viewing different pages – it was definitely disappointing to not be able to explore that aspect of our project, as cyber security practices are more important now than ever before. The best way to have begun to implement this would have been to get familiar with the SpringSecurity Package and implement all of the various features that are available to add boilerplate level security to our project.</p>
+    <br>
     <h2>-Project Retrospective-</h2>
     <p><b>What did your group do well?</b><br>
     The group did several things well. We had an open line of communication at all times through Slack. If someone had an idea, a concern or simply needed clarification they cold reach another member and have a response almost instantly. The group as a whole was very professional and courteous of one another. If disagreements came up they were usually met with a middle ground. Meetings were held once a week (or more if needed) with meeting minutes and topics of discussion recorded for future reference. Members worked together to overcome any confusions that came up over the use of Grails and React as these were new experiences for many in the group.</p>
